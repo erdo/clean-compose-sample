@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import foo.bar.clean.ui.common.AppTheme
 import foo.bar.clean.ui.home.HomeScreen
@@ -20,7 +21,7 @@ class Activity : ComponentActivity() {
 
             AppTheme {
 
-                var showSplash by remember { mutableStateOf(true) }
+                var showSplash by rememberSaveable { mutableStateOf(true) }
 
                 if (showSplash) {
                     SplashScreen { showSplash = false }
