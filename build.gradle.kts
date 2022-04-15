@@ -14,7 +14,7 @@ buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${foo.bar.clean.Shared.Versions.kotlin}")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${foo.bar.clean.Shared.Versions.kotlin}")
-        classpath("com.android.tools.build:gradle:7.0.4")
+        classpath("com.android.tools.build:gradle:7.1.3")
     }
 }
 

@@ -4,8 +4,14 @@ plugins {
 }
 
 android {
+
+    defaultConfig {
+        versionCode = 1
+        versionName = "0.1"
+    }
+
     lint {
-        isAbortOnError = true
+        abortOnError = true
         lintConfig = File(project.rootDir, "app/lint-app.xml")
     }
 }
