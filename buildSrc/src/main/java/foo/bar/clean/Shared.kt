@@ -14,9 +14,9 @@ object Shared {
     }
 
     object Versions {
-        const val kotlin = "1.6.20"
+        const val kotlin = "1.6.10"
         const val compose = "1.1.1"
-        const val fore = "1.5.10"
+        const val fore = "1.5.9"
         const val persista = "1.1.0"
     }
 
