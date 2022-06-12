@@ -1,11 +1,13 @@
 package foo.bar.clean.domain.tictactoe
 
 import co.early.fore.core.observer.Observable
-import co.early.fore.kt.core.Either
+import co.early.fore.kt.core.type.Either
 import co.early.fore.kt.core.coroutine.awaitMain
 import co.early.fore.kt.core.coroutine.launchIO
 import co.early.fore.kt.core.delegate.Fore
 import co.early.fore.kt.core.observer.ObservableImp
+import co.early.fore.kt.core.type.Either.Fail
+import co.early.fore.kt.core.type.Either.Success
 import co.early.persista.PerSista
 import foo.bar.clean.domain.DomainError
 import foo.bar.clean.domain.tictactoe.Player.*
@@ -92,8 +94,8 @@ class Game (
 
         launchIO {
             when (val result = autoPlayerService.getAutoPlayersTurn()) {
-                is Either.Left -> processError(result.a)
-                is Either.Right -> processAutoPlayerMove(result.b)
+                is Fail -> processError(result.value)
+                is Success -> processAutoPlayerMove(result.value)
             }
         }
     }

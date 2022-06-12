@@ -6,7 +6,6 @@ import co.early.fore.kt.core.delegate.Fore
 import foo.bar.clean.di.dataModule
 import foo.bar.clean.di.domainModule
 import foo.bar.clean.di.uiModule
-import kotlinx.serialization.ExperimentalSerializationApi
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -41,6 +40,7 @@ class App : MultiDexApplication() {
                     uiModule
                 )
             )
+            allowOverride(true)
         }
 
         init()

@@ -8,15 +8,15 @@ object Shared {
 
     object Android {
         const val minSdk = 21
-        const val compileSdk = 31
-        const val targetSdk = 31
+        const val compileSdk = 32
+        const val targetSdk = 32
         val javaVersion = JavaVersion.VERSION_1_8
     }
 
     object Versions {
-        const val kotlin = "1.6.10"
-        const val compose = "1.1.1"
-        const val fore = "1.5.9"
+        const val kotlin = "1.6.21"
+        const val compose = "1.2.0-beta03"
+        const val fore = "1.5.14"
         const val persista = "1.1.0"
     }
 

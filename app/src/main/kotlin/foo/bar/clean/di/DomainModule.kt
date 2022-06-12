@@ -4,7 +4,7 @@ import foo.bar.clean.domain.tictactoe.Game
 import foo.bar.clean.domain.wallet.Wallet
 import org.koin.dsl.module
 
-val domainModule = module(override = true) {
+val domainModule = module {
 
     /**
      * Models and Mediators

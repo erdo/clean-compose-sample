@@ -1,10 +1,10 @@
 /**
  * ./gradlew check
  * ./gradlew testDebugUnitTest
- * ./gradlew connectedAndroidTest -PtestBuildType=debug --no-daemon --no-parallel
+ * ./gradlew connectedAndroidTest -PtestBuildType=debug --no-daemon --no-parallel --continue
  * ./gradlew connectedAndroidTest -PtestBuildType=release
- * ./gradlew example-kt-01reactiveui:testDebugUnitTest --info
- * ./gradlew example-kt-04retrofit:dependencies --configuration releaseRuntimeClasspath
+ * ./gradlew app:testDebugUnitTest --info
+ * ./gradlew app:dependencies --configuration releaseRuntimeClasspath
  */
 buildscript {
     repositories {
@@ -14,7 +14,7 @@ buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${foo.bar.clean.Shared.Versions.kotlin}")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${foo.bar.clean.Shared.Versions.kotlin}")
-        classpath("com.android.tools.build:gradle:7.1.3")
+        classpath("com.android.tools.build:gradle:7.2.1")
     }
 }
 

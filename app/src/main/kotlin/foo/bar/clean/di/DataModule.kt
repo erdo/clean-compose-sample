@@ -4,6 +4,7 @@ import co.early.fore.core.time.SystemTimeWrapper
 import co.early.fore.kt.core.delegate.Fore
 import co.early.fore.kt.net.InterceptorLogging
 import co.early.fore.kt.net.ktor.CallProcessorKtor
+import co.early.fore.kt.net.ktor.CallWrapperKtor
 import co.early.persista.PerSista
 import foo.bar.clean.App
 import foo.bar.clean.data.api.ktor.CustomKtorBuilder
@@ -16,7 +17,7 @@ import foo.bar.clean.domain.tictactoe.AutoPlayerService
 import foo.bar.clean.domain.tictactoe.Game
 import org.koin.dsl.module
 
-val dataModule = module(override = true) {
+val dataModule = module {
 
     /**
      * Ktor
@@ -31,7 +32,7 @@ val dataModule = module(override = true) {
     }
 
     single {
-        CallProcessorKtor(
+        CallWrapperKtor(
             ErrorHandler(get())
         )
     }
@@ -54,7 +55,7 @@ val dataModule = module(override = true) {
     single<AutoPlayerService> {
         AutoPlayerServiceImp(
             client = AutoPlayerApi.create(get()),
-            processor = get(),
+            wrapper = get(),
             logger = get()
         )
     }
