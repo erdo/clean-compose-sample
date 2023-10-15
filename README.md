@@ -1,3 +1,7 @@
+
+** Archived, see 
+https://github.com/erdo/commercial-template instead **
+
 # Clean Architecture and Jetpack Compose UI
 
 Based on a previous [clean architecture sample](https://github.com/erdo/clean-modules-sample) (which was written with xml based UI). As well as being setup with clean kotlin modules, this version is setup for compose UI and uses kotlin based gradle files, buildSrc plugins, and koin for DI
